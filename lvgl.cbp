@@ -1613,6 +1613,9 @@
 		<Unit filename="lvgl/src/drivers/x11/lv_x11_input.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="lvgl/src/font/ds_digital_100.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lvgl/src/font/lv_binfont_loader.c">
 			<Option compilerVar="CC" />
 		</Unit>
