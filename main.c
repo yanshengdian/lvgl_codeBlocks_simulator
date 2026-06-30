@@ -11,7 +11,10 @@
 #include "lvgl/lvgl.h"
 #include "lvgl/demos/lv_demos.h"
 
- #include <stdio.h>
+#include <stdio.h>
+
+
+#include "user_app/ui_manager.h"
 
 
 lv_obj_t * main_screen;
@@ -50,6 +53,51 @@ static void back_to_main_cb(lv_event_t * e);
 
 
 
+//
+//int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLine, int nCmdShow)
+//{
+//    /*Initialize LVGL*/
+//    lv_init();
+//
+//    /*Initialize the HAL for LVGL*/
+//    lv_display_t * display = lv_windows_create_display(title, 320, 240, 100, FALSE, FALSE);
+//    lv_obj_set_scrollbar_mode(lv_scr_act(), LV_SCROLLBAR_MODE_OFF);
+//    lv_windows_acquire_pointer_indev(display);
+//
+//    lv_indev_t * encoder_indev = lv_windows_acquire_encoder_indev(display);
+//    g = lv_group_create();
+//     lv_indev_set_group(encoder_indev, g);
+//    lv_group_set_default(g);
+//
+//
+//
+//
+//    main_screen = lv_obj_create(NULL); // Create the base object
+//    setup_main_screen(main_screen);    // Build the UI on it
+//    lv_scr_load(main_screen);          // Show it
+//
+//
+//
+//    lv_timer_create(power_timer_cb1, 100, NULL);
+//    lv_timer_create(power_timer_cb2, 500, NULL);
+//
+//
+//
+//    while(1) {
+//        /* Periodically call the lv_task handler.
+//         * It could be done in a timer interrupt or an OS task too.*/
+//
+//        lv_task_handler();
+//        usleep(5000);       /*Just to let the system breath*/
+//    }
+//    return 0;
+//}
+
+
+
+
+
+
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLine, int nCmdShow)
 {
@@ -57,29 +105,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLi
     lv_init();
 
     /*Initialize the HAL for LVGL*/
-    lv_display_t * display = lv_windows_create_display(title, 320, 240, 100, FALSE, FALSE);
-    lv_obj_set_scrollbar_mode(lv_scr_act(), LV_SCROLLBAR_MODE_OFF);
-    lv_windows_acquire_pointer_indev(display);
 
-    lv_indev_t * encoder_indev = lv_windows_acquire_encoder_indev(display);
-    g = lv_group_create();
-     lv_indev_set_group(encoder_indev, g);
-    lv_group_set_default(g);
-
-
-
-
-    main_screen = lv_obj_create(NULL); // Create the base object
-    setup_main_screen(main_screen);    // Build the UI on it
-    lv_scr_load(main_screen);          // Show it
-
-
-
-    lv_timer_create(power_timer_cb1, 100, NULL);
-    lv_timer_create(power_timer_cb2, 500, NULL);
-
-
-
+    ui_init();
     while(1) {
         /* Periodically call the lv_task handler.
          * It could be done in a timer interrupt or an OS task too.*/
