@@ -49,7 +49,6 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-D_WIN32_WINNT=0x0601" />
 			<Add directory="." />
 		</Compiler>
 		<Unit filename="lv_conf.h" />
@@ -2497,6 +2496,22 @@
 		<Unit filename="resources.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="user_app/ui_curves.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_app/ui_curves.h" />
+		<Unit filename="user_app/ui_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_app/ui_main.h" />
+		<Unit filename="user_app/ui_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_app/ui_manager.h" />
+		<Unit filename="user_app/ui_settings.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_app/ui_settings.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
