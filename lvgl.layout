@@ -2,34 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="lvgl\src\core\lv_obj_draw.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11952" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="lvgl\src\font\ds_digital_100.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="34038" topLine="750" />
-		</Cursor>
-	</File>
-	<File name="lv_conf.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="36350" topLine="1053" />
-		</Cursor>
-	</File>
-	<File name="resources.rc" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="29" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="user_app\ui_manager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="426" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="lvgl\src\drivers\windows\lv_windows_context.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3138" topLine="112" />
+		</Cursor>
+	</File>
+	<File name="lvgl\src\osal\lv_windows.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4355" topLine="172" />
+		</Cursor>
+	</File>
+	<File name="user_app\ui_power_up.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1517" topLine="19" />
 		</Cursor>
 	</File>
 	<File name="lvgl\examples\widgets\obj\lv_example_obj_2.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -37,19 +22,34 @@
 			<Cursor1 position="44" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="lvgl\lv_version.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="lvgl\src\font\ds_digital_100.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="60" topLine="0" />
+			<Cursor1 position="34038" topLine="750" />
 		</Cursor>
 	</File>
-	<File name="user_app\ui_manager.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="962" topLine="14" />
+			<Cursor1 position="3016" topLine="121" />
+		</Cursor>
+	</File>
+	<File name="lv_conf.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="36350" topLine="1053" />
+		</Cursor>
+	</File>
+	<File name="user_app\ui_settings.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4620" topLine="127" />
 		</Cursor>
 	</File>
 	<File name="lvgl\src\drivers\windows\lv_windows_display.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="310" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="user_app\ui_manager.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2011" topLine="43" />
 		</Cursor>
 	</File>
 	<File name="lvgl\src\misc\lv_palette.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -62,14 +62,34 @@
 			<Cursor1 position="2755" topLine="69" />
 		</Cursor>
 	</File>
-	<File name="lvgl\src\osal\lv_windows.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="lvgl\examples\others\observer\lv_example_observer_2.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4355" topLine="172" />
+			<Cursor1 position="253" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="resources.rc" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="362" topLine="0" />
+			<Cursor1 position="29" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="user_app\logo.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="411" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="lvgl\src\core\lv_obj_draw.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11952" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="user_app\ui_manager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1656" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="lvgl\lv_version.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="60" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

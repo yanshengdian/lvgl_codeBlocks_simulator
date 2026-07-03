@@ -6,6 +6,35 @@ During this session, only read or modify these paths:
 Do not read, search, or touch any other files in the project.
 */
 
+
+/*
+don't remove this blok of comment.
+it's the screen's layout.
+
++-------------------------------------------------------------------+ Y=0
+
+| [??][??][??][??]  24.0V  10.0A  240W                 ??100% 10:15 | Y=24 (Status Bar)
++-------------------------------------------------------------------+
+
+|                                                                   |
+|   CURRENT VALUE                                                   |
+|   #######################                                         |
+|   #                     #        SETTING VALUE                    |
+|   #   375.4 °C          #       ###############                   |
+|   #                     #       # [ 380.0 °C ]# <-- Half size font| Y=115 (Main Values)
+|   #######################       ###############                   |
+|                                                                   |
+|   POWER OUTPUT                                                    |
+|   [?????????????????????????] 60%                                 | Y=165 (Power Bar)
+|   |                                                               |
+|   +-------------------------+     +-------------------------+     |
+|   |      ?? SETTINGS         |     |       ?? GRAPH VIEW     |     | Y=225 (Buttons)
+|   +-------------------------+     +-------------------------+     |
++-------------------------------------------------------------------+ Y=240
+X=0                       X=160   X=170                         X=320
+
+
+*/
 #include "ui_main.h"
 #include "ui_manager.h"
 #include "lvgl/lvgl.h"

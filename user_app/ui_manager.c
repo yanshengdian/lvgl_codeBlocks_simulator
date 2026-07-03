@@ -23,6 +23,9 @@ lv_obj_t * scr_curves   = NULL;
 lv_group_t * ui_encoder_group = NULL;
 ui_system_data_t ui_data;
 
+lv_style_t ui_style_menu_row;
+lv_style_t ui_style_menu_container;
+
 /* -------------------------------------------------------------------------
  * 2. SUBROUTINE: Local Data Model Factory Defaults
  * ------------------------------------------------------------------------- */
@@ -47,6 +50,26 @@ static void ui_init_default_data(void)
     ui_data.key_locker_enabled     = false;
 }
 
+void ui_apply_global_styles(void)
+{
+    lv_style_init(&ui_style_menu_container);
+    lv_style_set_bg_opa(&ui_style_menu_container, LV_OPA_TRANSP);
+    lv_style_set_border_width(&ui_style_menu_container, 0);
+    lv_style_set_pad_all(&ui_style_menu_container, 0);
+    lv_style_set_pad_row(&ui_style_menu_container, 2);
+    /* keep content away from screen edges */
+    lv_style_set_pad_left(&ui_style_menu_container, 8);
+    lv_style_set_pad_right(&ui_style_menu_container, 8);
+
+    lv_style_init(&ui_style_menu_row);
+    lv_style_set_bg_opa(&ui_style_menu_row, LV_OPA_TRANSP);
+    lv_style_set_border_width(&ui_style_menu_row, 0);
+    lv_style_set_pad_all(&ui_style_menu_row, 2);
+    /* keep row children away from row edges when using space-between */
+    lv_style_set_pad_left(&ui_style_menu_row, 8);
+    lv_style_set_pad_right(&ui_style_menu_row, 8);
+}
+
 /* -------------------------------------------------------------------------
  * 3. MAIN UI ROUTER ARCHITECTURE
  * ------------------------------------------------------------------------- */
@@ -54,6 +77,9 @@ void ui_init(void)
 {
    /* Initialize default parameter states */
    ui_init_default_data();
+
+   /* Apply a shared global style for menu items and screens */
+   ui_apply_global_styles();
 
    /* Allocate the global master encoder navigation group */
    ui_encoder_group = lv_group_create();

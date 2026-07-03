@@ -2496,6 +2496,13 @@
 		<Unit filename="resources.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="user_app/hardware_controls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_app/hardware_controls.h" />
+		<Unit filename="user_app/logo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="user_app/ui_curves.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -2508,6 +2515,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="user_app/ui_manager.h" />
+		<Unit filename="user_app/ui_power_up.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_app/ui_power_up.h" />
 		<Unit filename="user_app/ui_settings.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -61,5 +61,9 @@ extern ui_system_data_t ui_data;
  * ------------------------------------------------------------------------- */
 void ui_init(void);
 void ui_navigate_to(ui_screen_t target_screen);
+void ui_apply_global_styles(void);
+
+extern lv_style_t ui_style_menu_row;
+extern lv_style_t ui_style_menu_container;
 
 #endif /* UI_MANAGER_H */
