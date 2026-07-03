@@ -23,7 +23,7 @@ typedef struct {
     float current_current;
     float current_power;
     uint32_t power_output_percent;
-    
+
     /* Adjustable Configurations */
     float setting_temp;
     bool buzzer_enabled;
@@ -45,7 +45,7 @@ extern ui_system_data_t ui_data;
 /* -------------------------------------------------------------------------
  * 4. PUBLIC INTERFACE FUNCTIONS
  * ------------------------------------------------------------------------- */
-void ui_init(void);
+//void ui_init(void);
 void ui_navigate_to(ui_screen_t target_screen);
 
 #endif /* UI_MANAGER_H */

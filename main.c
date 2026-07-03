@@ -9,12 +9,16 @@
 #include <unistd.h>
 
 #include "lvgl/lvgl.h"
-#include "lvgl/demos/lv_demos.h"
+
 
 #include <stdio.h>
 
 
 #include "user_app/ui_manager.h"
+#include "user_app/ui_power_up.h"
+#include "user_app/ui_curves.h"
+#include "user_app/ui_main.h"
+#include "user_app/ui_settings.h"
 
 
 lv_obj_t * main_screen;
@@ -105,8 +109,22 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLi
     lv_init();
 
     /*Initialize the HAL for LVGL*/
+    lv_display_t * display = lv_windows_create_display(title, 320, 240, 100, FALSE, FALSE);
+    lv_obj_set_scrollbar_mode(lv_scr_act(), LV_SCROLLBAR_MODE_OFF);
+    lv_windows_acquire_pointer_indev(display);
 
-    ui_init();
+    lv_indev_t * encoder_indev = lv_windows_acquire_encoder_indev(display);
+    g = lv_group_create();
+     lv_indev_set_group(encoder_indev, g);
+    lv_group_set_default(g);
+
+
+    main_screen = lv_obj_create(NULL); // Create the base object
+    setup_main_screen(main_screen);    // Build the UI on it
+    lv_scr_load(main_screen);          // Show it
+
+    //ui_init();
+    ui_power_up_init();
     while(1) {
         /* Periodically call the lv_task handler.
          * It could be done in a timer interrupt or an OS task too.*/
