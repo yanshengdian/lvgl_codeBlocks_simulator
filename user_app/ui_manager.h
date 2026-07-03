@@ -1,3 +1,13 @@
+/*
+During this session, only read or modify these paths:
+- f:\work\Desktop\lvgl_pc_simulation_codeBlocks\lvgl_codeBlocks_simulator\main.c
+- f:\work\Desktop\lvgl_pc_simulation_codeBlocks\lvgl_codeBlocks_simulator\user_app\*
+
+Do not read, search, or touch any other files in the project.
+
+*/
+
+
 #ifndef UI_MANAGER_H
 #define UI_MANAGER_H
 
@@ -39,13 +49,17 @@ typedef struct {
 /* -------------------------------------------------------------------------
  * 3. GLOBAL VARIABLES (Shared Interfaces)
  * ------------------------------------------------------------------------- */
+extern lv_obj_t * scr_power_up;
+extern lv_obj_t * scr_main;
+extern lv_obj_t * scr_settings;
+extern lv_obj_t * scr_curves;
 extern lv_group_t * ui_encoder_group;
 extern ui_system_data_t ui_data;
 
 /* -------------------------------------------------------------------------
  * 4. PUBLIC INTERFACE FUNCTIONS
  * ------------------------------------------------------------------------- */
-//void ui_init(void);
+void ui_init(void);
 void ui_navigate_to(ui_screen_t target_screen);
 
 #endif /* UI_MANAGER_H */

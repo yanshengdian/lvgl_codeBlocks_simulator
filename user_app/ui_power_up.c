@@ -1,3 +1,12 @@
+/*
+During this session, only read or modify these paths:
+- f:\work\Desktop\lvgl_pc_simulation_codeBlocks\lvgl_codeBlocks_simulator\main.c
+- f:\work\Desktop\lvgl_pc_simulation_codeBlocks\lvgl_codeBlocks_simulator\user_app\*
+
+Do not read, search, or touch any other files in the project.
+*/
+
+
 
 /*
 
@@ -33,22 +42,24 @@ X=0                       X=160   X=170                         X=320
 
 
 #include "ui_power_up.h"
+#include "ui_manager.h"
+
+static void ui_power_up_timeout_cb(lv_timer_t * timer)
+{
+    lv_timer_del(timer);
+    ui_navigate_to(UI_SCREEN_MAIN);
+}
 
 void ui_power_up_init(void)
 {
-    // 1. Create a screen object (or use an existing active screen)
-    lv_obj_t * scr_power_up = lv_obj_create(NULL);
-    lv_obj_set_style_bg_color(scr_power_up, lv_color_black(), 0); // Black background
+    /* Create a screen object and keep it in the UI manager. */
+    scr_power_up = lv_obj_create(NULL);
 
-    // 2. Create the image widget on this screen
+    /* Create the image widget on this screen. */
     lv_obj_t * img_logo = lv_image_create(scr_power_up);
-    
-    // 3. Set the source to your converted C array image descriptor
     lv_image_set_src(img_logo, &logo);
-    
-    // 4. Center the logo perfectly on your 320x240 screen
     lv_obj_center(img_logo);
 
-    // 5. Load the screen to make it visible
-    lv_screen_load(scr_power_up);
+    /* Display this screen for 3 seconds, then switch to main. */
+    lv_timer_create(ui_power_up_timeout_cb, 3000, NULL);
 }

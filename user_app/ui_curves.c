@@ -1,26 +1,20 @@
-/*
+ï»¿/*
+During this session, only read or modify these paths:
+- f:\work\Desktop\lvgl_pc_simulation_codeBlocks\lvgl_codeBlocks_simulator\main.c
+- f:\work\Desktop\lvgl_pc_simulation_codeBlocks\lvgl_codeBlocks_simulator\user_app\*
 
-+-------------------------------------------------------------------+ Y=0
-
-|  ?? REAL-TIME MONITOR                                             | Y=16 (Slim Header)
-+-------------------------------------------------------------------+
-
-|  NOW: 375.4 °C                     SET: [ 380.0 °C ] <--- (EC11)  | Y=38 (Live Metrics)
-+-------------------------------------------------------------------+
-
-| 400|   ____________________..--'''``--.._                         | Y=50
-|    | _.-'                                 `-.                     |
-| 200|'                                        `-.                  | Y=115 (Chart Canvas)
-|    |                                            `-.               |
-|   0+-------------------------------------------------             | Y=180
-|     0s      10s     20s     30s     40s     50s    60s            |
-+-------------------------------------------------------------------+
-
-|    +-------------------------+     +-------------------------+    |
-|    |       ?? MAIN UI        |     |      ?? SETTINGS         |    | Y=230 (Action Row)
-|    +-------------------------+     +-------------------------+    |
-+-------------------------------------------------------------------+ Y=240
-X=0                       X=160   X=170                         X=320
-
-
+Do not read, search, or touch any other files in the project.
 */
+
+#include "ui_curves.h"
+#include "ui_manager.h"
+
+void ui_curves_init(void)
+{
+    scr_curves = lv_obj_create(NULL);
+}
+
+void ui_curves_focused(void)
+{
+    lv_group_remove_all_objs(ui_encoder_group);
+}
